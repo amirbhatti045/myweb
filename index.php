@@ -4,7 +4,7 @@
 <head>
   <title>Tempo Bootstrap Template - Index</title>
 
-  <?php include"includes/files.html"; ?>
+  <?php include"includes/files.php"; ?>
 </head>
 
 <body>
