@@ -86,6 +86,20 @@
           </li>
         </ul>
       </li>End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav"  href="profile.php">
+        <i class="bi bi-person"></i><span>Profile</span>
+        </a>
+        <!-- <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="forms.php">
+              <i class="bi bi-circle"></i><span>Form</span>
+            </a>
+          </li>
+          
+        </ul> -->
+      </li><!-- End Forms Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">

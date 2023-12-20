@@ -1,35 +1,34 @@
 <?php 
-// include("auth.php");
-include("db_config.php");
-if(isset($_POST["login"])) {
-   $username = $_POST["username"];
-   $password = $_POST["password"];
 
-  //  $query = "SELECT * FROM admin_users WHERE username='$username'";
-  //  $result = mysqli_query($cn, $query);
-  //  $num_row = mysqli_num_rows($result);
-  //  $row = mysqli_fetch_array($result);
-  //  if($num_row > 0) {
-  //   $ck = $row["password"];
-  //   if(password_verify( $password, $ck)) {
-  //     session_start();
-  //     $_SESSION["username"] = $username;
-  //     $_SESSION["email"] = $email;
-  //     $_SESSION["mobile"] = $mobile;
-  //     $_SESSION["address"] = $address;
-  //     $_SESSION["usertype"] = $usertype;
-  //     $_SESSION["password"] = $password;
-  //     header('Location:index.php');
+// session_start();
+// // $_SESSION['user']
+//    $username = $_POST["username"];
+//    $password = $_POST["password"];
 
-  //   }
+  //  $qry = "SELECT * FROM admin_users WHERE email='$email' AND password='$password' ";
+  //  $result = mysqli_query($cn, $qry);
+  //  if(mysqli_num_rows($result) > 0) {
+  //   foreach($result as $row) {
+  //     $id = $row['id'];
+  //     $username = $row['username'];
+  //     $email = $row['email'];
+  //     $mobile = $row['mobile'];
+  //     $address = $row['address'];
+    
+    // $_SESSION['auth'] = true;
+    // $_SESSION['auth_user'] = [
+    //   'id'=> $id,
+    //   'username'=> $username,
+    //   'email'=> $email,
+    //   'mobile'=> $mobile,
+    //   'address'=> $address
+    // ];
+  //   header('Location:index.php');
   //  }
-  if($username == "admin" && $password == "admin"){
-    session_start();
-    $_SESSION["user"] = $username;
-    header('Location:index.php');
-  }
-}
-?>
+   
+
+// }
+// ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,11 +67,11 @@ if(isset($_POST["login"])) {
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 " method="post">
+                  <form class="row g-3 " method="post" action="auth.php">
                     <div class="col-12">
-                      <label class="form-label">Username</label>
+                      <label class="form-label">User Name</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <span class="input-group-text" ></span>
                         <input type="text"  class="form-control"  required name="username">    
                       </div>
                     </div>

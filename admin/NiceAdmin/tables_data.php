@@ -50,51 +50,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php 
-                   require_once 'includes/classes/meekrodb.2.3.class.php'; // Adjust the path to MeekroDB
-
-                   // Include your configuration file
-                   require_once 'db_config.php';
-                   
-                   // Check if the user is authorized to access this data
-                   
-                       // Use MeekroDB to perform the database query
-                       $results = DB::query("SELECT * FROM admin_users");
-                   
-                       // Check if any rows were returned
-                       if ($results) {
-                           foreach ($results as $row) {
-                               // Process each row of data from the admin_users table
-                                 $id= $row['id'];
-                                $name= $row['username'];
-                                $email= $row['email'];
-                                $mobile= $row['mobile'];
-                                $address= $row['address'];
-                                $usertype= $row['usertype'];
-                               
-                          }
-                       
-                      }
-                  ?>
                   <?php
-                  //  include "config.php";
-                  //  $qry = "SELECT * FROM admin_users";
-                  //  $result = mysqli_query($cn, $qry);
-                  //  if($result->num_rows > 0){
-                  //   while ($row = $result->fetch_assoc()) {
+                   include "config.php";
+                   $qry = "SELECT * FROM admin_users";
+                   $result = mysqli_query($cn, $qry);
+                   if($result->num_rows > 0){
+                    while ($row = $result->fetch_assoc()) {
                   ?>
                   <tr>
-                    <td><?php echo $id; ?></td>
-                    <td><?php echo $name; ?></td>
-                    <td><?php echo $email; ?></td>
-                    <td><?php echo $mobile; ?></td>
-                    <td><?php echo $address; ?></td>
-                    <td><?php echo $usertype; ?></td>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['username']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['mobile']; ?></td>
+                    <td><?php echo $row['address']; ?></td>
+                    <td><?php echo $row['usertype']; ?></td>
                     <td>
                       <a href="edit.php?editid=<?php echo $row['id']; ?>" >Edit</a>|<a href="delete.php?deleteid=<?php echo $row['id']; ?>">Delete</a>
                     </td>
                   </tr>
-                 
+                 <?php } }?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

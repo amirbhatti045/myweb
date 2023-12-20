@@ -86,12 +86,6 @@ if($num_rows > 0){
                     <input type="text" class="form-control" name="mobile" value="<?php echo $mobile; ?>">
                   </div>
                 </div>
-                <!-- <div class="row mb-3">
-                  <label  class="col-sm-2 col-form-label">File Upload</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" type="file" name="file">
-                  </div>
-                </div> -->
                 <div class="row mb-3">
                   <label for="inputPassword" class="col-sm-2 col-form-label">Address</label>
                   <div class="col-sm-10">
